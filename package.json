@@ -1,0 +1,23 @@
+{
+	"name": "nest-sveltekit-starter",
+	"workspaces": [
+		"common",
+		"backend",
+		"frontend"
+	],
+	"scripts": {
+		"build": "npm run build --workspace=common && npm run build --workspace=backend && npm run build --workspace=frontend",
+		"dev": "npm run init --workspace=common && npm-run-all --print-label --parallel dev:common dev:frontend dev:backend",
+		"start": "cross-env NODE_ENV=production node --expose-gc backend/dist/main.js",
+		"dev:backend": "npm run dev --workspace=backend",
+		"dev:frontend": "npm run dev --workspace=frontend",
+		"dev:common": "npm run dev --workspace=common",
+		"preview": "npm run start"
+	},
+	"devDependencies": {
+		"npm-run-all": "^4.1.5"
+	},
+	"dependencies": {
+		"cross-env": "^7.0.3"
+	}
+}

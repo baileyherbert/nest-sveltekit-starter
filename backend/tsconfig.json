@@ -1,0 +1,41 @@
+{
+	"compilerOptions": {
+		"module": "commonjs",
+		"removeComments": true,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"allowSyntheticDefaultImports": true,
+		"noImplicitOverride": true,
+		"esModuleInterop": true,
+		"target": "es2022",
+		"sourceMap": true,
+		"outDir": "./dist",
+		"rootDir": "./src",
+		"baseUrl": "./",
+		"incremental": true,
+		"skipLibCheck": true,
+		"strict": true,
+		"alwaysStrict": true,
+		"newLine": "lf",
+		"noImplicitAny": false,
+		"strictBindCallApply": false,
+		"forceConsistentCasingInFileNames": false,
+		"noFallthroughCasesInSwitch": true,
+		"preserveWatchOutput": true,
+		"tsBuildInfoFile": "dist/.tsbuildinfo",
+		"lib": [
+			"es2022"
+		],
+		"types": [
+			"node",
+			"@nestjs/common",
+			"@workspace/common",
+			"express"
+		]
+	},
+	"references": [
+		{
+			"path": "../common"
+		}
+	]
+}
