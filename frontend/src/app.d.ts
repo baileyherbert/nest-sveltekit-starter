@@ -1,4 +1,4 @@
-import '@workspace/common';
+import {} from '@workspace/common';
 
 // See https://kit.svelte.dev/docs/types#app
 // for information about these interfaces

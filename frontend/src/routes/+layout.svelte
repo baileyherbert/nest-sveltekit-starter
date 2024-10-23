@@ -1,5 +1,9 @@
+<script lang="ts">
+	let { children } = $props();
+</script>
+
 <main>
-	<slot />
+	{@render children()}
 </main>
 
 <style global lang="scss">
