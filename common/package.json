@@ -1,31 +1,4 @@
 {
 	"name": "@workspace/common",
-	"private": true,
-	"exports": {
-		"./*": {
-			"types": "./src/*.ts",
-			"require": "./dist/*.js",
-			"default": "./src/*.ts"
-		}
-	},
-	"typesVersions": {
-		"*": {
-			"*": [
-				"./src/*"
-			]
-		}
-	},
-	"scripts": {
-		"init": "rimraf dist && tsc",
-		"dev": "tsc -w",
-		"build": "rimraf dist && tsc"
-	},
-	"devDependencies": {
-		"rimraf": "^4.0.0",
-		"typescript": "^5.0.0"
-	},
-	"dependencies": {
-		"class-transformer": "^0.5.0",
-		"class-validator": "^0.14.0"
-	}
+	"private": true
 }

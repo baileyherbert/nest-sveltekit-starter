@@ -1,27 +1,19 @@
 {
 	"compilerOptions": {
-		"outDir": "dist",
-		"composite": true,
-		"rootDir": "src",
-
 		"module": "commonjs",
 		"moduleResolution": "node",
-
-		"target": "esnext",
-
-		"declaration": true,
-		"declarationMap": false,
-		"sourceMap": true,
-
-		"downlevelIteration": true,
+		"target": "es2023",
 		"esModuleInterop": true,
+		"isolatedModules": true,
+		"baseUrl": "./",
+		"outDir": "dist",
+		"noEmit": true,
+
+		"strict": true,
+		"alwaysStrict": true,
 		"experimentalDecorators": true,
 		"emitDecoratorMetadata": true,
 		"resolveJsonModule": true,
-
-		"alwaysStrict": true,
-		"strict": true,
-		"noEmitOnError": true,
 		"noFallthroughCasesInSwitch": true,
 		"noUnusedLocals": false,
 		"noUnusedParameters": false,
@@ -30,14 +22,12 @@
 		"importsNotUsedAsValues": "remove",
 		"forceConsistentCasingInFileNames": true,
 		"preserveWatchOutput": true,
-		"tsBuildInfoFile": "dist/.tsbuildinfo",
 
 		"skipLibCheck": true,
 		"stripInternal": true,
 		"removeComments": false,
-
-		"newLine": "lf"
 	},
-	"include": ["src/**/*.ts"],
-	"exclude": ["node_modules", "lib", "dist"]
+	"include": [
+		"src/**/*.ts"
+	]
 }

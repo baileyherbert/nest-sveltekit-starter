@@ -6,18 +6,25 @@
 		"frontend"
 	],
 	"scripts": {
-		"build": "npm run build --workspace=common && npm run build --workspace=backend && npm run build --workspace=frontend",
-		"dev": "npm run init --workspace=common && npm-run-all --print-label --parallel dev:common dev:frontend dev:backend",
-		"start": "cross-env NODE_ENV=production node --expose-gc backend/dist/main.js",
+		"build": "npm run build --workspace=backend && npm run build --workspace=frontend",
+		"dev": "npm-run-all --print-label --parallel dev:frontend dev:backend",
+		"start": "cross-env NODE_ENV=production node --expose-gc backend/dist/backend/src/main.js",
 		"dev:backend": "npm run dev --workspace=backend",
 		"dev:frontend": "npm run dev --workspace=frontend",
-		"dev:common": "npm run dev --workspace=common",
 		"preview": "npm run start"
 	},
 	"devDependencies": {
-		"npm-run-all": "^4.1.5"
+		"npm-run-all": "^4.1.5",
+		"rimraf": "^6.0.0"
 	},
 	"dependencies": {
-		"cross-env": "^7.0.3"
+		"class-transformer": "^0.5.0",
+		"class-validator": "^0.14.0",
+		"cross-env": "^7.0.0"
+	},
+	"overrides": {
+		"@sveltejs/kit": {
+			"cookie": "^1.0.0"
+		}
 	}
 }

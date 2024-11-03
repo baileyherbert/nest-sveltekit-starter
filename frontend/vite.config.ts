@@ -6,11 +6,6 @@ export default defineConfig({
 	ssr: {
 		external: []
 	},
-	optimizeDeps: {
-		exclude: [
-			'@workspace/common'
-		],
-	},
 	server: {
 		hmr: {
 			clientPort: 5173

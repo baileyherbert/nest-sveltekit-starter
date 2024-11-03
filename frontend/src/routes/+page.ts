@@ -1,4 +1,4 @@
-export async function load(event) {
-	const response = await event.fetch('/api/test');
+export async function load({ fetch }) {
+	const response = await fetch('/api/test');
 	return response.json();
 }
