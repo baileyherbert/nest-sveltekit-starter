@@ -25,7 +25,7 @@
 		"@workspace/frontend": "*",
 		"http-proxy-middleware": "^2.0.0",
 		"mysql2": "^3.0.0",
-		"neverthrow": "^6.0.0",
+		"neverthrow": "^8.0.0",
 		"reflect-metadata": "^0.2.0",
 		"typeorm": "^0.3.0",
 		"typeorm-naming-strategies": "^4.0.0"
